@@ -27,6 +27,25 @@ span {
 .container {
 	max-width: 1600px;
 }
+
+
+.topArticles {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	height: auto; 
+
+	li {
+		width: 100%; 
+		@include tablet {
+			flex-basis: 33.333%; 
+			} 
+		@include desktop {
+			flex-basis: 25%; 
+			} 
+	}
+	}
+
 .abstract {
 	text-align: left;
 	position: absolute;
@@ -41,25 +60,6 @@ span {
 	width: 100%;
 	background-position: 50%;
 	background-size: cover; 
-}
-
-.topArticles {
-	display: flex;
-	flex-wrap: wrap;
-	width: 100%;
-	height: auto; 
-
-	li {
-	width: 100%; 
-	@media (min-width: 600px) {
-	li {
-		flex-basis: 33.333%; 
-		} }
-	@media (min-width: 1000px) {
-	li {
-		flex-basis: 25%; 
-		} 
-	}
 }
 
 
