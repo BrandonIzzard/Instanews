@@ -5,6 +5,7 @@ $(document).ready(function(){
 
 $('#articles').on('change', function(event) {
 	event.preventDefault();
+	$('.loading').show();
 	var selected = $('#sections').val().toLowerCase();
 
 	var url = 'https://api.nytimes.com/svc/topstories/v2/' + selected + '.json';
@@ -22,7 +23,7 @@ $('#articles').on('change', function(event) {
 		$('.nyt-logo').css('height', '120px');
 		$('.insta-header').css('height', '25vh');
 		$('.topArticles').empty();
-		$('.loading').show();
+		$('.loading').hide();
 
 		var filterNews = data.results.filter(function(value){
 			return value.multimedia.length >=5
@@ -50,9 +51,4 @@ $('#articles').on('change', function(event) {
 	.fail(function(err) {
 		throw err;	
 	})
-
-	.always(function() {
-		$('.loading').hide();
-	});
-
 });
