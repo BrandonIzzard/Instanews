@@ -21,41 +21,45 @@ body {
 }
 
 span {
-	text-transform: uppercase; }
+	text-transform: uppercase; 
+}
 
-	.container {
-		max-width: 1600px;
-	}
-	.abstract {
-		text-align: left;
-		position: absolute;
-		bottom: 0;
-		padding: 1rem .5rem;
-		background: rgba(0,0,0, 0.5);
-	}
-	.articleBackground {
+.container {
+	max-width: 1600px;
+}
+.abstract {
+	text-align: left;
+	position: absolute;
+	bottom: 0;
+	padding: 1rem .5rem;
+	background: rgba(0,0,0, 0.5);
+}
+.articleBackground {
 
-		position: relative;
-		height: 400px;
-		width: 100%;
-		background-position: 50%;
-		background-size: cover; 
-	}
+	position: relative;
+	height: 400px;
+	width: 100%;
+	background-position: 50%;
+	background-size: cover; 
+}
 
-	.topArticles {
-		display: flex;
-		flex-wrap: wrap;
-		width: 100%;
-		height: auto; 
-	}
+.topArticles {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	height: auto; 
 
 	li {
-		width: 100%; }
-		@media (min-width: 600px) {
-			li {
-				flex-basis: 33.333%; 
-				} }
-				@media (min-width: 1000px) {
-					li {
-						flex-basis: 25%; 
-						} }
+	width: 100%; 
+	@media (min-width: 600px) {
+	li {
+		flex-basis: 33.333%; 
+		} }
+	@media (min-width: 1000px) {
+	li {
+		flex-basis: 25%; 
+		} 
+	}
+}
+
+
