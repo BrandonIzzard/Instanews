@@ -1,8 +1,11 @@
 # Instanews
 redAcademy Web Dev 3rd Project.
----------------------------------------
+
+## Summary
 One page site that pulls the top stories in certain selections using the New York Times API, Ajax, & JSON.
 Building on our foundation of HTML and CSS with the use of SASS/CSS3.
+
+
 -----------------------------------------
 ![Site Pic](http://i.imgur.com/F5EeKjU.png)
 
