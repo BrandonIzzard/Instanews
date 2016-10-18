@@ -19,22 +19,13 @@ var plumberErrorHandler={
 
 gulp.task('scripts', function(){ //Runs the task default
     gulp.src('./js/*.js') //Which files that gulp will work with
-      .pipe(plumber(plumberErrorHandler))
+      // .pipe(plumber(plumberErrorHandler))  we don't need the plumber here 
       .pipe(uglify())  //Modify using uglify function , which minifies
       .pipe(rename({ extname: '.min.js' })) //changes the name to the modified
       .pipe(gulp.dest('./build/js')) //Where we put the result
     });
 
 // Watch scss AND html files, doing different things with each.
-
-
-gulp.task('browser-sync', function() {
-  bs.init({
-    server: {
-      baseDir: "./"
-    }
-  });
-});
 
 gulp.task('sass', function() {
  gulp.src('./sass/style.scss')
@@ -49,23 +40,31 @@ gulp.task('sass', function() {
  .pipe(gulp.dest('./build/css'));
 });
 
-gulp.task('watch', ['browser-sync'], function() {
-  gulp.watch('js/*.js', ['scripts']);
-  gulp.watch('sass/*.scss', ['sass']);
+gulp.task('browser-sync', function() {
+  bs.init({
+    server: {
+      baseDir: "./"
+    }
+  });
   gulp.watch(["build/css/*.css", "build/js/*.js"]).on('change', bs.reload);
 });
+ 
 
  gulp.task('lint', function() {
-   return gulp.src('js/*.js')
+   return gulp.src('./js/*js')
    .pipe(eslint())
    .pipe(eslint.format())
-   .pipe(eslint.failOnError());
+   .pipe(eslint.failAfterError());
  });
 
+gulp.task('watch', function() {
+  gulp.watch('js/*.js', ['scripts','lint']);
+  gulp.watch('sass/*.scss', ['sass']);
+}); 
 
- gulp.task('hello', function(){
-  console.log('Hello Everybody! Inflammable means flammable? What a country! ');
-});
+//  gulp.task('hello', function(){
+//   console.log('Hello Everybody! Inflammable means flammable? What a country! ');
+// });
 // Modify our default task method by passing an array of task names
 
-gulp.task('default', ['hello', 'scripts', 'browser-sync', 'watch', 'lint']);
+gulp.task('default', ['watch','browser-sync', 'lint']);
