@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Instanews NYT</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="./build/css/style.min.css">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+	
+</head>
+
+<body class ="container" >
+
+
+	<header class ="insta-header">
+		<div class ="logo">
+			<img src="assets/images/nyt-logo.svg" class="nyt-logo" alt="New York Times Logo"></img></div>
+		<form class="articles" action="#" method="post" id="articles">
+            <div class="option-menu">
+              <p>Choose a section:</p>
+              <select class="sections" id="sections">
+                  <option value="">Sections ...</options>
+                  <option value="home">Home</option>
+                  <option value="National">National</option>
+                  <option value="technology">Technology</option>
+                  <option value="science">Science</option>
+                  <option value="business">Business</option>
+                  <option value="sports">Sports</option>
+                  <option value="travel">Travel</option>
+                  <option value="movies">Movies</option>
+               </select>
+             </div>
+        </form>
+	</header>
+	<div class ="loading" id= "loading" img src="assets/images/ajax-loader.gif" alt = "Spinning Loading Gif"></div>
+	<ul class="topArticles"></ul>
+
+
+	<footer class="insta-footer">
+		<div class="copyright">
+		<p><i class="fa fa-copyright" aria-hidden="true"></i> Copyright 2016 <span>Instanews</span></p>
+		</div>
+	</footer>
+
+
+
+<script src="jquery-3.1.1.js"></script>
+<script src="/js/main.js"></script>
+</body>
+</html>

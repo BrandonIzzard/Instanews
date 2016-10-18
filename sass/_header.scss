@@ -1,0 +1,42 @@
+html {
+	font-size: 16px;
+}
+
+form {
+	margin-bottom: 2rem; }
+
+	.sections
+	{
+		font-size: 2rem;
+	}
+	.nyt-logo {
+		height: auto;
+		margin-right: 2rem;
+	}			
+
+	.insta-header {
+		padding: 2rem;
+		display: flex;
+		height: 90vh;
+		flex-direction: column;
+		justify-content: center;
+		text-align: center;
+	}
+	.insta-header p {
+		font-size: .9rem;
+		margin-top: 1rem;
+		margin-bottom: 1rem;
+	}
+
+	@media (min-width: 600px) {
+		.insta-header {
+			text-align: left;
+			align-items: center;
+			flex-direction: row;
+			flex-wrap: wrap;
+		}}
+
+		@media (min-width: 1000px) {
+		.insta-header {
+			justify-content: flex-start; 
+			}}
