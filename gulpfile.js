@@ -1,4 +1,4 @@
-var gulp = require('gulp'),
+let gulp = require('gulp'),
   uglify = require('gulp-uglify'),
   rename = require('gulp-rename'),
   sass = require('gulp-sass'),
@@ -9,7 +9,7 @@ var gulp = require('gulp'),
   eslint = require('gulp-eslint'),
   notify = require('gulp-notify');
 
-var plumberErrorHandler={
+let plumberErrorHandler={
   errorHandler: notify.onError({
     title: 'Gulp',
     message: 'Error: <%=error.message %>' //Willsee what the error is if not able to compile sass file.
