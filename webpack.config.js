@@ -2,7 +2,7 @@ var webpack = require("webpack");
 module.exports = {
 	entry: './js/main.js',
 	output: {
-		filename: './build/bundle.js'
+		filename: './build/js/main.min.js'
 	},
   module: {
     loaders: [
@@ -14,7 +14,7 @@ module.exports = {
     }
   }, {
    test: /\.scss$/,
-   loaders: ["style", "css?sourceMap", "sass?sourceMap"]
+   loaders: ["style", "css", "sass?sourceMap"]
  },{
   test: /\.css$/,
   loaders: ["style", "css?"]  
@@ -25,8 +25,7 @@ module.exports = {
 }, {
  test: /\.(jpe?g|png)$/,
  loader: 'file'
-}
-]	
+}]	
 },
 devServer: {
    		// watch:true,

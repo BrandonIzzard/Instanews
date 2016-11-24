@@ -1,3 +1,5 @@
+import '../sass/style.scss';
+
 $(document).ready(function(){
 	// console.log('Hello Rose');
 	//
