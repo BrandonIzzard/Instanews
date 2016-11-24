@@ -1,24 +1,32 @@
 {
   "name": "instanews",
-  "version": "1.0.0",
-  "description": "instanews is the best news",
-  "main": "gulpfile.js",
+  "version": "1.5.1",
+  "description": "Instanews is the best news",
+  "main": "entry.js",
   "scripts": {
-    "test": "start"
+    "validate": "webpack-validator webpack.config.js",
+    "start": "webpack-dev-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BrandonIzzard/Instanews.git"
   },
   "author": "Brandon Izzard",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BrandonIzzard/Instanews/issues"
+  },
+  "homepage": "https://github.com/BrandonIzzard/Instanews#readme",
   "devDependencies": {
-    "browser-sync": "^2.17.3",
-    "eslint": "^3.7.1",
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^3.1.1",
-    "gulp-cssnano": "^2.1.2",
-    "gulp-eslint": "^3.0.1",
-    "gulp-notify": "^2.2.0",
-    "gulp-plumber": "^1.1.0",
-    "gulp-rename": "^1.2.2",
-    "gulp-sass": "^2.3.2",
-    "gulp-uglify": "^2.0.0"
+    "babel-core": "^6.18.2",
+    "babel-loader": "^6.2.8",
+    "babel-preset-es2015": "^6.18.0",
+    "css-loader": "^0.26.0",
+    "file-loader": "^0.9.0",
+    "node-sass": "^3.13.0",
+    "sass-loader": "^4.0.2",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.13.3",
+    "webpack-dev-server": "^1.16.2"
   }
 }
